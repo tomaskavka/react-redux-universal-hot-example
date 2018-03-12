@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { CounterButton, GithubButton } from 'components';
 import config from '../../config';
 import Helmet from 'react-helmet';
 
@@ -9,6 +8,7 @@ export default class Home extends Component {
     const styles = require('./Home.scss');
     // require the logo image both from client and server
     const logoImage = require('./logo.png');
+
     return (
       <div className={styles.home}>
         <Helmet title="Home"/>
@@ -29,18 +29,6 @@ export default class Home extends Component {
                 <i className="fa fa-github"/> View on Github
               </a>
             </p>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="star"
-                          width={160}
-                          height={30}
-                          count large/>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="fork"
-                          width={160}
-                          height={30}
-                          count large/>
 
             <p className={styles.humility}>
               Created and maintained by <a href="https://twitter.com/erikras" target="_blank">@erikras</a>.
@@ -49,12 +37,6 @@ export default class Home extends Component {
         </div>
 
         <div className="container">
-          <div className={styles.counterContainer}>
-            <CounterButton multireducerKey="counter1"/>
-            <CounterButton multireducerKey="counter2"/>
-            <CounterButton multireducerKey="counter3"/>
-          </div>
-
           <p>This starter boilerplate app uses the following technologies:</p>
 
           <ul>
